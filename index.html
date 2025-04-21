@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchbook Portfolio | Artist</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background: var(--light-bg);
+        }
+
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .header p {
+            margin: 1rem 0 0;
+            opacity: 0.9;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        .masonry-grid {
+            columns: 3;
+            column-gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .masonry-image {
+            width: 100%;
+            display: block;
+            border-radius: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .masonry-item:hover .masonry-image {
+            transform: scale(1.05);
+        }
+
+        .masonry-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .masonry-item:hover .masonry-overlay {
+            transform: translateY(0);
+        }
+
+        .masonry-overlay h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .masonry-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .masonry-grid {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Sketchbook Portfolio</h1>
+        <p>Explore my creative process through sketches, studies, and visual experiments</p>
+    </header>
+
+    <div class="container">
+        <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="masonry-grid">
+            <div class="masonry-item">
+                <img src="4.jpeg" alt="Sketch 1" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Urban Sketching</h3>
+                    <p>Pencil on paper, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="5.jpeg" alt="Sketch 2" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Gesture Drawing</h3>
+                    <p>Charcoal on paper, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="6.jpeg" alt="Sketch 3" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Life Drawing</h3>
+                    <p>Pencil on paper, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="7.jpeg" alt="Sketch 4" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Color Studies</h3>
+                    <p>Watercolor on paper, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="8.jpeg" alt="Sketch 5" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Light & Shadow</h3>
+                    <p>Oil on canvas, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="9.jpeg" alt="Sketch 6" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Texture Studies</h3>
+                    <p>Mixed media, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="10.jpeg" alt="Sketch 7" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Character Design</h3>
+                    <p>Digital sketch, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="11.jpeg" alt="Sketch 8" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Environment Design</h3>
+                    <p>Digital sketch, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="12.jpeg" alt="Sketch 9" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Storyboard</h3>
+                    <p>Digital sketch, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="13.jpeg" alt="Sketch 10" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Concept Art</h3>
+                    <p>Digital painting, 2023</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <img src="14.jpeg" alt="Sketch 11" class="masonry-image">
+                <div class="masonry-overlay">
+                    <h3>Illustration</h3>
+                    <p>Mixed media, 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

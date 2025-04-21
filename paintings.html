@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings | Himani G S</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3e;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --bg-color: #ffffff;
+            --section-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .header p {
+            margin: 1rem 0 0;
+            opacity: 0.9;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem; /* Adjusted padding for consistency */
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid #2c3e50;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            background: #2c3e50;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--section-bg);
+            border-radius: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .art-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            aspect-ratio: 3/4;
+        }
+
+        .art-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .art-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .art-item:hover .art-image {
+            transform: scale(1.05);
+        }
+
+        /* Specific styles for the smaller images */
+        .small-image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            align-items: center; /* Center the images vertically */
+            height: 100%; /* Ensure it takes the full height of the grid item */
+        }
+
+        .small-image {
+            width: 90%; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Add some margin between the two images */
+        }
+
+        .small-image-big {
+            width: 95%; /* Increase the width of the 3.jpeg image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .art-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .art-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Paintings Gallery</h1>
+        <p>A collection of vibrant paintings showcasing artistic expression</p>
+    </header>
+
+    <div class="container">
+        <nav class="nav-links">
+            <a href="portfolio.html">Home</a>
+            <a href="sketches.html">Sketches</a>
+            <a href="digital.html">Digital Art</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+
+        <section>
+            <div class="section-title">
+                <h2>Art Collection</h2>
+                <p>Explore my creative journey through various artistic expressions</p>
+            </div>
+            <div class="art-grid">
+                <div class="art-item">
+                    <img src="1.jpeg" alt="Painting 1" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="2.jpeg" alt="Painting 2" class="art-image">
+                </div>
+                <div class="art-item">
+                    <div class="small-image-container">
+                        <img src="3.jpeg" alt="Painting 3" class="art-image small-image-big"> <!-- Third image from last -->
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="Art1.jpeg" alt="Painting 4" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art2.jpeg" alt="Painting 5" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art3.jpeg" alt="Painting 6" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art6.jpg" alt="Painting 7" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art7.jpg" alt="Painting 8" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art8.jpg" alt="Painting 9" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art10.jpg" alt="Painting 10" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art11.jpg" alt="Painting 11" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art12.jpg" alt="Painting 12" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art13.jpeg" alt="Painting 13" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art14.jpeg" alt="Painting 14" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art15.jpeg" alt="Painting 15" class="art-image">
+                </div>
+                <div class="art-item">
+                    <div class="small-image-container">
+                        <img src="Art16.jpeg" alt="Painting 16" class="art-image small-image"> <!-- Third image from last -->
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="Art17.jpeg" alt="Painting 17" class="art-image">
+                </div>
+                <div class="art-item">
+                    <img src="Art18.jpeg" alt="Painting 18" class="art-image">
+                </div>
+                <div class="art-item">
+                    <div class="small-image-container">
+                        <img src="Art19.jpeg" alt="Painting 19" class="art-image small-image"> <!-- Last image with small class -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

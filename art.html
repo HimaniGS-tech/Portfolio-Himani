@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Collection | Himani G S</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: #f9f9f9;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .header p {
+            margin: 1rem 0 0;
+            opacity: 0.9;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .art-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            aspect-ratio: 3/4;
+        }
+
+        .art-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .art-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .art-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .art-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .art-item:hover .art-overlay {
+            transform: translateY(0);
+        }
+
+        .art-overlay h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .art-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .art-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .art-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Art Collection</h1>
+        <p>Explore my creative journey through various artistic expressions</p>
+    </header>
+
+    <div class="container">
+        <nav class="nav-links">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About Me</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+
+        <!-- Art Collection Section -->
+        <section>
+            <div class="section-title">
+                <h2>Art Collection</h2>
+                <p>Explore my creative journey through various artistic expressions</p>
+            </div>
+            <div class="art-grid">
+                <div class="art-item">
+                    <img src="art1.jpeg" alt="Artwork 1">
+                    <div class="art-overlay">
+                        <h3>Creative Expression</h3>
+                        <p>Mixed Media, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art2.jpeg" alt="Artwork 2">
+                    <div class="art-overlay">
+                        <h3>Artistic Vision</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art3.jpeg" alt="Artwork 3">
+                    <div class="art-overlay">
+                        <h3>Creative Design</h3>
+                        <p>Digital Art, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art4.jpeg" alt="Artwork 4">
+                    <div class="art-overlay">
+                        <h3>Digital Illustration</h3>
+                        <p>Creative Design, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art5.jpeg" alt="Artwork 5">
+                    <div class="art-overlay">
+                        <h3>Modern Art</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art6.jpeg" alt="Artwork 6">
+                    <div class="art-overlay">
+                        <h3>Contemporary Design</h3>
+                        <p>Digital Artwork, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art7.jpeg" alt="Artwork 7">
+                    <div class="art-overlay">
+                        <h3>Creative Expression</h3>
+                        <p>Digital Design, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art8.jpeg" alt="Artwork 8">
+                    <div class="art-overlay">
+                        <h3>Modern Illustration</h3>
+                        <p>Digital Art, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art9.jpeg" alt="Artwork 9">
+                    <div class="art-overlay">
+                        <h3>Digital Creation</h3>
+                        <p>Creative Design, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art10.jpeg" alt="Artwork 10">
+                    <div class="art-overlay">
+                        <h3>Artistic Vision</h3>
+                        <p>Digital Artwork, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art11.jpeg" alt="Artwork 11">
+                    <div class="art-overlay">
+                        <h3>Creative Design</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art12.jpeg" alt="Artwork 12">
+                    <div class="art-overlay">
+                        <h3>Modern Art</h3>
+                        <p>Digital Illustration, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art13.jpeg" alt="Artwork 13">
+                    <div class="art-overlay">
+                        <h3>Contemporary Design</h3>
+                        <p>Digital Art, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art14.jpeg" alt="Artwork 14">
+                    <div class="art-overlay">
+                        <h3>Creative Expression</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art15.jpeg" alt="Artwork 15">
+                    <div class="art-overlay">
+                        <h3>Modern Illustration</h3>
+                        <p>Digital Artwork, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art16.jpeg" alt="Artwork 16">
+                    <div class="art-overlay">
+                        <h3>Digital Design</h3>
+                        <p>Creative Art, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art17.jpeg" alt="Artwork 17">
+                    <div class="art-overlay">
+                        <h3>Artistic Vision</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art18.jpeg" alt="Artwork 18">
+                    <div class="art-overlay">
+                        <h3>Creative Design</h3>
+                        <p>Digital Art, 2023</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art19.jpeg" alt="Artwork 19">
+                    <div class="art-overlay">
+                        <h3>Modern Art</h3>
+                        <p>Digital Creation, 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 
